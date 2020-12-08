@@ -36,7 +36,7 @@ h.append('Accept', 'application/json');
 
 const getLocation = async (requestUrl) =>{
     const proxy = 'https://cors-anywhere.herokuapp.com/';
-    const response = await fetch(proxy+requestUrl, {
+    const response = await fetch(requestUrl, {
         method: 'GET',
         headers: h,
         mode: 'cors'
@@ -83,7 +83,7 @@ function getSelectedCityId(e){
         let cityId = e.target.firstElementChild.textContent;
         let cityName = e.target.innerText;
         
-        fetch(`https://dataservice.accuweather.com/currentconditions/v1/${cityId}?apikey=${key2}&details=true`)
+        fetch(`https://dataservice.accuweather.com/currentconditions/v1/${cityId}?apikey=${key3}&details=true`)
         .then(data => data.json())
         .then(result => updateUiCurrent(cityName, result))
         
