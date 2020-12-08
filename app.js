@@ -1,4 +1,6 @@
-const key = "oNg4GigPYmOpvmaiOSVq9eyMZUt4F2Pf";
+const key1 = "uy01SQTo6cU6Dc4At8wF4iTurThGGMFY";
+const key2 = "93KRHeJr22rsRQ40J6w1q0gVFlX0UQGT";
+const key3 = "MFSwhOylTXMEu22u7ij52NHVzdLGKsLL";
 const proxy = "https://cors-anywhere.herokuapp.com/";
 const accu_api = `https://dataservice.accuweather.com/currentconditions/v1/260803?apikey=SurGM538ksuF4wAkU1A11mwPGqBXDAWc&details=true`;
 let url = 'https://dataservice.accuweather.com';
@@ -21,7 +23,7 @@ function showCityList(e){
         document.querySelector('.list-group').innerHTML = '';
     }
     else{
-        let requestUrl = `${url}${endPoint}?apikey=${key}&q=${query}`;
+        let requestUrl = `${url}${endPoint}?apikey=${key1}&q=${query}`;
         getLocation(requestUrl).then((data)=>{
             createTemporaryViewList(data);  
         }).catch((err)=>{
@@ -74,11 +76,11 @@ function getSelectedCityId(e){
         let cityId = e.target.firstElementChild.textContent;
         let cityName = e.target.innerText;
         
-        fetch(`https://dataservice.accuweather.com/currentconditions/v1/${cityId}?apikey=${key}&details=true`)
+        fetch(`https://dataservice.accuweather.com/currentconditions/v1/${cityId}?apikey=${key2}&details=true`)
         .then(data => data.json())
         .then(result => updateUiCurrent(cityName, result))
         
-        fetch(`https://dataservice.accuweather.com/forecasts/v1/daily/1day/${cityId}?apikey=${key}&details=true&metric=true`)
+        fetch(`https://dataservice.accuweather.com/forecasts/v1/daily/1day/${cityId}?apikey=${key3}&details=true&metric=true`)
         .then(data => data.json())
         .then(result => updateUiForcast(result))
 
@@ -280,11 +282,11 @@ window.addEventListener('load', (event) => {
     let cityId = 261158;
     let cityName = 'Karachi';
     
-    fetch(`https://dataservice.accuweather.com/currentconditions/v1/${cityId}?apikey=${key}&details=true`)
+    fetch(`https://dataservice.accuweather.com/currentconditions/v1/${cityId}?apikey=${key2}&details=true`)
     .then(data => data.json())
     .then(result => updateUiCurrent(cityName, result))
     
-    fetch(`https://dataservice.accuweather.com/forecasts/v1/daily/1day/${cityId}?apikey=${key}&details=true&metric=true`)
+    fetch(`https://dataservice.accuweather.com/forecasts/v1/daily/1day/${cityId}?apikey=${key3}&details=true&metric=true`)
     .then(data => data.json())
     .then(result => updateUiForcast(result))
 
