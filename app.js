@@ -1,6 +1,6 @@
-const key1 = "uy01SQTo6cU6Dc4At8wF4iTurThGGMFY";
-const key2 = "93KRHeJr22rsRQ40J6w1q0gVFlX0UQGT";
-const key3 = "MFSwhOylTXMEu22u7ij52NHVzdLGKsLL";
+const key1 = "vCeuVFGXJUYjs5I6sgwj0VQMPYuItF7m";
+const key2 = "D9TDZxBcNY5QZDLcgBl0hse7g4L12AnS";
+const key3 = "dcoTRM0Rf4nYIef48qSISx2AeM7cr9Le";
 const proxy = "https://cors-anywhere.herokuapp.com/";
 const accu_api = `https://dataservice.accuweather.com/currentconditions/v1/260803?apikey=SurGM538ksuF4wAkU1A11mwPGqBXDAWc&details=true`;
 let url = 'https://dataservice.accuweather.com';
@@ -31,16 +31,10 @@ function showCityList(e){
         })
     }
 }
-let h = new Headers();
-h.append('Accept', 'application/json');
+
 
 const getLocation = async (requestUrl) =>{
-    const proxy = 'https://cors-anywhere.herokuapp.com/';
-    const response = await fetch(requestUrl, {
-        method: 'GET',
-        headers: h,
-        mode: 'cors'
-    });
+    const response = await fetch(requestUrl);
     const data = await response.json();
     return data;
 }
