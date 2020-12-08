@@ -23,7 +23,7 @@ function showCityList(e){
         document.querySelector('.list-group').innerHTML = '';
     }
     else{
-        let requestUrl = `${url}${endPoint}?apikey=${key1}&q=${query}`;
+        let requestUrl = `${url}${endPoint}?apikey=${key2}&q=${query}`;
         getLocation(requestUrl).then((data)=>{
             createTemporaryViewList(data);  
         }).catch((err)=>{
@@ -31,9 +31,16 @@ function showCityList(e){
         })
     }
 }
+let h = new Headers();
+h.append('Accept', 'application/json');
 
 const getLocation = async (requestUrl) =>{
-    const response = await fetch(requestUrl);
+    const proxy = 'https://cors-anywhere.herokuapp.com/';
+    const response = await fetch(proxy+requestUrl, {
+        method: 'GET',
+        headers: h,
+        mode: 'cors'
+    });
     const data = await response.json();
     return data;
 }
