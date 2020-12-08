@@ -1,0 +1,14 @@
+{
+    "name": "Live Weather",
+    "short_name": "Weather",
+    "theme_color": "#121212",
+    "background_color": "#121212",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/index.html",
+    "icons": [{
+        "src": "./icon.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }]
+  }
