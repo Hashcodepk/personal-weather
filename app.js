@@ -1,4 +1,4 @@
-const key = "HWGLjdHy9PjKZiGfZfffp3NsCMrJjyZT";
+const key = "oNg4GigPYmOpvmaiOSVq9eyMZUt4F2Pf";
 const proxy = "https://cors-anywhere.herokuapp.com/";
 const accu_api = `https://dataservice.accuweather.com/currentconditions/v1/260803?apikey=SurGM538ksuF4wAkU1A11mwPGqBXDAWc&details=true`;
 let url = 'https://dataservice.accuweather.com';
