@@ -253,6 +253,7 @@ body {
     color: white;
     display: inline-block;
     background-color: black;
+    font-size: 1.7rem;
 }
 
 .header .header__heading .emoji {
