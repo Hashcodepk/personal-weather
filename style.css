@@ -7,7 +7,8 @@
 }
 
 html {
-    font-size: 62.5%; /* 10px */ //1rem
+    font-size: 62.5%; /* 10px */ 
+    background-color: #0e0e0e;
 }
 
 body {
@@ -16,7 +17,7 @@ body {
     background-color: #121212;
     color: white;
     -webkit-font-smoothing: antialiased;
-    max-width: 700px;
+    max-width: 600px;
     margin: auto;
 }
 
@@ -37,6 +38,7 @@ body {
     border: 0;
     width: 40vw;
     color: white;
+    max-width: 300px;
 }
 
 [placeholder]::-webkit-input-placeholder { color: rgba(255,255,255,.8); }
@@ -73,6 +75,7 @@ body {
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
+        min-height: 280px;
 }
 
 .weather-main__city-heading {
@@ -269,4 +272,10 @@ a {
 
 a:hover {
     color: white;
+}
+
+.abcd {
+    max-width: 65%;
+    margin: auto;
+    min-width: 60%;
 }

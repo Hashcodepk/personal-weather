@@ -157,7 +157,7 @@ function updateUiCurrent(name, data) {
             </div>
      `
         status.innerHTML = `
-                <img src="https://www.accuweather.com/images/weathericons/${WeatherIcon}.svg" alt="weather icon" class="img-icon">
+                <img src="https://www.accuweather.com/images/weathericons/${WeatherIcon}.svg" alt="weather icon" class="img-icon mb-2">
                 <p class="status-msg">${WeatherText}</p>`
 
         details.innerHTML = `
